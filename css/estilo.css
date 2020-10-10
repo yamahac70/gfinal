@@ -37,6 +37,7 @@ left: 0;
    align-self: center; */
    width: 60%;
    padding-left: 20% ;
+   min-width: 700px;
 
 
 }
