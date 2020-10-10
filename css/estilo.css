@@ -25,15 +25,16 @@ body{
 }
 
 .contenidomenu{
-  /*   display: flex;
+  display: flex;
     top: 0;
 bottom: 0;
 right: 0;
 left: 0;
    align-items: center;
-   justify-content: center; */
-   display: grid;
-   align-self: center;
+   justify-content: center;
+
+  /*  display: grid;
+   align-self: center; */
    width: 60%;
    padding-left: 20% ;
 
