@@ -1,0 +1,149 @@
+*{
+    margin-top: 0%;
+    /* margin-right: 0%; */
+    margin-left: 0%;
+}
+body{
+    background: rgb(255, 219, 255);
+}
+
+.titulo{
+  /*   margin-right:6% ;
+    margin-left: 6%; */
+    /* margin-top: -65rem; */
+    padding: 3%;
+    color: white;
+    display: block;
+    margin-left: 20%;
+    margin-right:20% ;
+    top: 0%;
+    text-align: center;
+    background: rgb(218, 138, 255);
+   
+    border-radius: 0px 0px 15px 15px;
+   
+}
+
+.contenidomenu{
+  /*   display: flex;
+    top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+   align-items: center;
+   justify-content: center; */
+   display: grid;
+   align-self: center;
+   width: 60%;
+   padding-left: 20% ;
+
+
+}
+
+
+.menu{
+/* margin-top: 7%; */
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(3, minmax(100px, 1fr)) ;
+    grid-auto-flow: 8rem;
+    grid-gap: .3%;
+    background: rgb(248, 195, 248);
+
+    border-radius: 15px 15px 15px 15px;
+    border: rgba(255, 32, 155, 0.329) solid 5px ;
+padding: 1%;
+    
+}
+.menu img{
+  
+width: 100%;
+height: 100%;
+object-fit: cover;
+cursor: pointer;
+  transition: 0.3s;
+
+}
+.menu img:hover{
+  opacity: 0.7;
+}
+.modal{
+ display: none; 
+  position:fixed ;
+  z-index: 1;/* lo que hace la propiedad es que con 1 esta encima el contenido z es el eje z  */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /*cuando la pagina sea muy pequeña se activara el scroll toma los parametros overflow:visible; overflow:hidden; overflow:scloll; */
+  background-color: rgb(92, 16, 86);
+  background-color: rgba(92, 16, 86, 0.9);
+
+
+}
+/* contenido de modal la imagen que se mostrara */
+.modal .modal-contenido{
+
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 658px;
+  object-fit: scale-down;
+
+}
+/* descripcion de la imagen */
+.modal #caption{
+  margin: auto;
+  display: block;
+  width: 80%;
+ /*  max-width: 500px; */
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 5px 0;
+  height: 150px;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 48px 48px 15px 15px / 16px 16px 15px 15px;
+}
+
+/* Ponemos las animaciones en este caso zoom */
+.modal-contenido, .modal #caption{
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom{
+  /* de escala 0 a 1 */
+  from{ transform: scale(0);}
+  to{transform: scale(1);}
+}
+
+/* Boton de salida */
+
+.modal .close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.modal .close:hover,
+.modal .close:focus
+{
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+/* anchura completa en pantallas pequeñas */
+
+@media only screen and (max-width: 700px){
+
+  .modal-contenido{
+    width: 100%;
+  }
+
+}
